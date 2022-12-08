@@ -1,0 +1,10 @@
+/* background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%)); */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+}
+

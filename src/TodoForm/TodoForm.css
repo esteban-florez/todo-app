@@ -1,0 +1,40 @@
+@import url(../vars.css);
+
+.TodoForm {
+  margin-top: 12px;
+  height: 48px;
+  border-radius: 6px;
+  width: 100%;
+  background-color: var(--very-dark-desaturated-blue);
+  align-items: center;
+  display: grid;
+  grid-template-columns: 12% 1fr;
+  padding: 0 12px;
+}
+
+.TodoForm-input {
+  height: 100%;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  font-size: 13px;
+  color: var(--light-grayish-blue);
+  caret-color: var(--bright-blue);
+}
+
+.TodoForm div {
+  cursor: default;
+}
+
+@media (min-width: 376px) {
+  .TodoForm {
+    height: 64px;
+    grid-template-columns: 10% 1fr;
+  }
+
+  .TodoForm-input {
+    margin: 0 0 0 4px;
+    font-size: 18px;
+  }
+}
+

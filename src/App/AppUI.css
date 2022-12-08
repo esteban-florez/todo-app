@@ -1,0 +1,33 @@
+@import url(../vars.css);
+
+body {
+  background-color: var(--very-dark-blue);
+  background-image: url(../images/bg-mobile-dark.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.App {
+  width: 325px;
+  margin: 0 auto;
+  padding-top: 25px;
+  height: 100vh;
+}
+
+.App-bottom-text {
+  font-size: 14px;
+  color: var(--dark-grayish-blue);
+  text-align: center;
+  padding: 45px 0;
+}
+
+@media (min-width: 376px) {
+  body {
+    background-image: url(../images/bg-desktop-dark.jpg);
+  }
+
+  .App {
+    width: 540px;
+  }
+}
+

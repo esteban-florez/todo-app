@@ -1,0 +1,27 @@
+.TodoList-container {
+  margin-top: 16px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.TodoList-list {
+  list-style-type: none;
+}
+
+.TodoList-footer {
+  border-radius: 0 0 6px 6px;
+  height: 50px;
+  width: 100%;
+  background-color: var(--very-dark-desaturated-blue);
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+@media (min-width: 376px) {
+  .TodoList-footer {
+    justify-items: center;
+    grid-template-columns: 15% 1fr 20%;
+  }
+}
+

@@ -1,0 +1,41 @@
+.Button {
+  background-color: transparent;
+  border: none;
+  color: var(--dark-grayish-blue);
+  transition: color 0.05s linear;
+  cursor: pointer;
+}
+
+.Button--selected {
+  color: var(--bright-blue);
+  cursor: default;
+}
+
+.Button--sm {
+  font-size: 11px;
+}
+
+.Button--lg {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@media (min-width: 376px) {
+  .Button--sm {
+    font-size: 13px;
+  }
+
+  .Button--lg {
+    font-size: 15px;
+  }
+
+  .Button:hover {
+    color: var(--light-grayish-blue);
+  }
+
+  .Button--selected:hover {
+    color: var(--bright-blue);
+    cursor: default;
+  }
+}
+

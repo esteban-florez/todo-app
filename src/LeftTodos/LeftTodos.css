@@ -1,0 +1,11 @@
+.LeftTodos {
+  color: var(--dark-grayish-blue);
+  font-size: 11px;
+}
+
+@media (min-width: 376px) {
+  .LeftTodos {
+    font-size: 14px;
+  }
+}
+

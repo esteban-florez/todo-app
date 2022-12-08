@@ -1,0 +1,36 @@
+.Icon {
+  z-index: 1;
+}
+
+.Icon--lg {
+  width: 20px;
+  height: 20px;
+}
+
+.Icon-ml {
+  width: 14px;
+  height: 14px;
+}
+
+.Icon--md {
+  width: 12px;
+  height: 12px;
+}
+
+.Icon--sm {
+  width: 9px;
+  height: 9px;
+}
+
+@media (min-width: 376px) {
+  .Icon--lg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .Icon--sm {
+    width: 11px;
+    height: 11px;
+  }
+}
+

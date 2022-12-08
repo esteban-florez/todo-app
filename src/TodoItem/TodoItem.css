@@ -1,0 +1,48 @@
+.TodoItem {
+  height: 55px;
+  border-bottom: 1px solid var(--very-dark-grayish-blue);
+  width: 100%;
+  background-color: var(--very-dark-desaturated-blue);
+  display: grid;
+  align-items: center;
+  grid-template-columns: 12% 1fr 10%;
+  padding: 0 0 0 11px;
+}
+
+.TodoItem:first-child {
+  border-radius: 6px 6px 0 0;
+}
+
+.TodoItem-text {
+  color: var(--light-grayish-blue);
+  font-size: 12px;
+  margin: 3px;
+}
+
+.TodoItem-text--checked {
+  text-decoration: line-through;
+  color: var(--dark-grayish-blue);
+}
+
+@media (min-width: 376px) {
+  .TodoItem {
+    height: 64px;
+    grid-template-columns: 10% 1fr 10%;
+  }
+
+  .TodoItem-text {
+    margin: 0 0 0 4px;
+    font-size: 18px;
+  }
+
+  .TodoItem-cross {
+    display: none;
+    cursor: pointer;
+  }
+
+  .TodoItem-cross--visible {
+    display: grid;
+    place-items: center;
+  }
+}
+

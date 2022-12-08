@@ -1,0 +1,13 @@
+.TodoHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+@media (min-width: 376px) {
+  .TodoHeader {
+    height: 100px;
+  }
+}
+
