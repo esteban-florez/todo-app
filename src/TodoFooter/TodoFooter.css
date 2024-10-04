@@ -1,0 +1,13 @@
+.TodoFooter {
+  margin-top: 3rem;
+  padding: .5rem;
+  text-align: center;
+  color: var(--text-bright);
+  background-color: var(--bg-neutral);
+  z-index: 10;
+}
+
+.TodoFooter a, .TodoFooter a:visited {
+  color: var(--text-hover);
+  font-weight: bold;
+}

@@ -40,7 +40,7 @@
 }
 
 .TodoForm-button:disabled {
-  opacity: .3;
+  opacity: .5;
   background-color: #aaa;
   color: var(--bg-neutral-desaturated);
   pointer-events: none;
