@@ -9,7 +9,7 @@
   cursor: pointer;
   width: 21px;
   height: 21px;
-  border: 2px solid var(--very-dark-grayish-blue);
+  border: 2px solid var(--text-neutral);
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -21,36 +21,35 @@
 
 .Checkbox-checked-bg {
   position: absolute;
-  display: none;
+  opacity: 0;
   width: 26px;
   height: 26px;
-  background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
   border-radius: 50%;
-  transition: all 0.4s linear;
+  transition: opacity 200ms ease;
 }
 
 .Checkbox-checked-bg--visible {
-  display: block;
+  opacity: 1;
 }
 
 .Checkbox-hover-circle {
   position: absolute;
-  display: none;
-  background-color: var(--very-dark-desaturated-blue);
+  background-color: var(--bg-neutral-desaturated);
   width: 24px;
   height: 24px;
   z-index: 1;
   border-radius: 50%;
 }
 
+.Checkbox--checked .Checkbox-hover-circle {
+  display: none;
+}
+
 @media (min-width: 376px) {
   .Checkbox {
     width: 26px;
     height: 26px;
-  }
-
-  .Checkbox-hover-circle--visible {
-    display: block;
   }
 }
 

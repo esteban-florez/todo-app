@@ -8,15 +8,15 @@ function Filters() {
 
   const filters = [
     {
-      text: 'All',
+      text: 'Todas',
       filter: 'all',
     },
     {
-      text: 'Active',
+      text: 'Activas',
       filter: 'active',
     },
     {
-      text: 'Completed',
+      text: 'Completadas',
       filter: 'completed',
     },
   ];

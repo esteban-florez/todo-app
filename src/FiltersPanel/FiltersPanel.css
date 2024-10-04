@@ -3,7 +3,7 @@
   border-radius: 6px;
   height: 50px;
   width: 100%;
-  background-color: var(--very-dark-desaturated-blue);
+  background-color: var(--bg-neutral-desaturated);
   display: flex;
   justify-content: center;
   align-items: center;

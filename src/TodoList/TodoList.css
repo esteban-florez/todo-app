@@ -1,6 +1,6 @@
 .TodoList-container {
   margin-top: 16px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 .25rem 1rem .5rem;
 }
 
 .TodoList-list {
@@ -8,10 +8,10 @@
 }
 
 .TodoList-footer {
-  border-radius: 0 0 6px 6px;
+  border-radius: 6px 6px 0 0;
   height: 50px;
   width: 100%;
-  background-color: var(--very-dark-desaturated-blue);
+  background-color: var(--bg-neutral-desaturated);
   align-items: center;
   display: flex;
   justify-content: space-between;

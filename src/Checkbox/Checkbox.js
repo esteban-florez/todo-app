@@ -9,12 +9,10 @@ const Checkbox = ({ children, checked, text, formCheckbox }) => {
 
   let checkboxClass = '';
   let checkedBgClass = '';
-  let hoverClass = '';
 
   if (!formCheckbox) {
     checkboxClass = checked ? ' Checkbox--checked' : '';
     checkedBgClass = (checked || hover) ? ' Checkbox-checked-bg--visible' : '';
-    hoverClass = (!checked && hover) ? ' Checkbox-hover-circle--visible' : '';
   }
 
   return (
@@ -22,7 +20,7 @@ const Checkbox = ({ children, checked, text, formCheckbox }) => {
       <div onMouseEnter={enter} onMouseLeave={leave} className={`Checkbox${checkboxClass}`}>
         <div className={`Checkbox-checked-bg${checkedBgClass}`} ></div>
         {children}
-        <div className={`Checkbox-hover-circle${hoverClass}`} ></div>
+        <div className={`Checkbox-hover-circle`} ></div>
       </div>
     </div >
   );

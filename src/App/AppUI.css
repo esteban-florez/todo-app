@@ -1,7 +1,7 @@
 @import url(../vars.css);
 
 body {
-  background-color: var(--very-dark-blue);
+  background-color: var(--bg-neutral);
   background-image: url(../images/bg-mobile-dark.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -16,7 +16,7 @@ body {
 
 .App-bottom-text {
   font-size: 14px;
-  color: var(--dark-grayish-blue);
+  color: var(--text-neutral);
   text-align: center;
   padding: 45px 0;
 }
@@ -27,7 +27,7 @@ body {
   }
 
   .App {
-    width: 540px;
+    width: 600px;
   }
 }
 

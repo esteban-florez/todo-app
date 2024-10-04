@@ -21,7 +21,7 @@ const Icon = ({ type, size }) => {
   };
 
   return (
-    <img className={`Icon${iconSizes[size]}`} src={`${iconTypes[type]}`} />
+    <img alt="Icono" className={`Icon${iconSizes[size]}`} src={`${iconTypes[type]}`} />
   );
 };
 

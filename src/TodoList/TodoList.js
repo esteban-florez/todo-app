@@ -20,10 +20,16 @@ const TodoList = () => {
     case 'completed':
       displayedTodos = completedTodos;
       break;
+    default: throw new Error('Filtro de tareas inválido.')
   }
 
   return (
     <div className='TodoList-container'>
+      <div className='TodoList-footer'>
+        <LeftTodos />
+        {(display === 'desktop') && <Filters />}
+        <Button click={clearCompleted} type='button' size='sm'>Eliminar Completadas</Button>
+      </div>
       <ul className='TodoList-list'>
         {displayedTodos.map(
           todo => (
@@ -35,11 +41,6 @@ const TodoList = () => {
             </TodoItem>)
         )}
       </ul>
-      <div className='TodoList-footer'>
-        <LeftTodos />
-        {(display === 'desktop') && <Filters />}
-        <Button click={clearCompleted} type='button' size='sm' >Clear Completed</Button>
-      </div>
     </div>
   );
 };

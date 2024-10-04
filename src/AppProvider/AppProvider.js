@@ -4,7 +4,7 @@ import useLocalStorage from './useLocalStorage';
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-  const [todos, saveTodos] = useLocalStorage('TodoApp_v1', defaultTodos);
+  const [todos, saveTodos] = useLocalStorage('TodoApp_v1', []);
   const [display, setDisplay] = React.useState(checkWindow(window.innerWidth));
   const [theme, setTheme] = React.useState('dark');
   const [leftTodos, setLeftTodos] = React.useState([]);
@@ -24,7 +24,7 @@ const AppProvider = ({ children }) => {
       completed: false,
       text,
     };
-    updatedTodos.push(newTodo);
+    updatedTodos.unshift(newTodo);
     saveTodos(updatedTodos);
   };
 

@@ -19,7 +19,7 @@ const TodoForm = () => {
   return (
     <form onSubmit={(e) => handleFormSubmit(e)} className='TodoForm'>
       <Checkbox formCheckbox></Checkbox>
-      <input id='newTodoInput' className='TodoForm-input' placeholder='Create a new todo...' />
+      <input id='newTodoInput' className='TodoForm-input' placeholder='Crear nueva tarea...' />
     </form>
   );
 };

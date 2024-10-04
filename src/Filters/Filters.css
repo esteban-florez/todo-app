@@ -1,14 +1,14 @@
 .Filters {
   display: flex;
+  gap: .5rem;
   width: 160px;
   height: 100%;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 @media (min-width: 376px) {
   .Filters {
-    margin-left: 36px;
-    width: 170px;
+    width: max-content;
   }
 }
 

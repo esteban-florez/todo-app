@@ -1,13 +1,13 @@
 .Button {
   background-color: transparent;
   border: none;
-  color: var(--dark-grayish-blue);
+  color: var(--text-neutral);
   transition: color 0.05s linear;
   cursor: pointer;
 }
 
 .Button--selected {
-  color: var(--bright-blue);
+  color: var(--primary);
   cursor: default;
 }
 
@@ -30,12 +30,11 @@
   }
 
   .Button:hover {
-    color: var(--light-grayish-blue);
+    color: var(--text-hover);
   }
 
-  .Button--selected:hover {
-    color: var(--bright-blue);
-    cursor: default;
+  .Button--selected {
+    pointer-events: none;
   }
 }
 
