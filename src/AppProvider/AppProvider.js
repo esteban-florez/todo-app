@@ -1,22 +1,26 @@
-import React from 'react';
+import { useState, useEffect, createContext } from 'react';
 import useLocalStorage from './useLocalStorage';
 
-const AppContext = React.createContext();
+const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
   const [todos, saveTodos] = useLocalStorage('TodoApp_v1', []);
-  const [display, setDisplay] = React.useState(checkWindow(window.innerWidth));
-  const [theme, setTheme] = React.useState('dark');
-  const [leftTodos, setLeftTodos] = React.useState([]);
-  const [completedTodos, setCompletedTodos] = React.useState([]);
-  const [currentFilter, setCurrentFilter] = React.useState('all');
+  const [display, setDisplay] = useState(checkWindow(window.innerWidth));
+  const [theme, setTheme] = useState('dark');
+  const [leftTodos, setLeftTodos] = useState([]);
+  const [completedTodos, setCompletedTodos] = useState([]);
+  const [currentFilter, setCurrentFilter] = useState('all');
 
-  React.useEffect(() => {
+  useEffect(() => {
     const leftTodos = todos.filter(todo => !todo.completed);
     setLeftTodos(leftTodos);
     const completedTodos = todos.filter(todo => todo.completed);
     setCompletedTodos(completedTodos);
   }, [todos]);
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme
+  }, [theme])
 
   const addTodo = (text) => {
     const updatedTodos = [...todos];
@@ -56,7 +60,7 @@ const AppProvider = ({ children }) => {
     return 'desktop';
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.onresize = () => {
       setDisplay(checkWindow(window.innerWidth));
     };

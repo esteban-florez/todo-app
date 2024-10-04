@@ -2,9 +2,17 @@
 
 body {
   background-color: var(--bg-neutral);
-  background-image: url(../images/bg-mobile-dark.jpg);
   background-repeat: no-repeat;
   background-size: contain;
+  transition: background-image 200ms ease;
+}
+
+:root[data-theme="dark"] body {
+  background-image: url(../images/bg-mobile-dark.jpg);
+}
+
+:root[data-theme="light"] body {
+  background-image: url(../images/bg-mobile-light.jpg);
 }
 
 .App {
@@ -22,10 +30,13 @@ body {
 }
 
 @media (min-width: 376px) {
-  body {
+  :root[data-theme="dark"] body {
     background-image: url(../images/bg-desktop-dark.jpg);
   }
-
+  
+  :root[data-theme="light"] body {
+    background-image: url(../images/bg-desktop-light.jpg);
+  }
   .App {
     width: 600px;
   }
