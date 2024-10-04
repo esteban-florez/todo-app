@@ -1,6 +1,7 @@
 .TodoList-container {
   margin-top: 16px;
   box-shadow: rgba(0, 0, 0, 0.24) 0 .25rem 1rem .5rem;
+  border-radius: 0 0 6px 6px;
 }
 
 .TodoList-list {
@@ -16,6 +17,20 @@
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
+}
+
+.TodoList-empty {
+  height: 15rem;
+  display: grid;
+  place-items: center;
+  background-color: var(--bg-neutral-desaturated);
+  border-top: 1px solid var(--bg-border);
+  border-radius: 0 0 6px 6px;
+}
+
+.TodoList-empty-message {
+  color: var(--text-neutral);
+  padding-bottom: 1rem;
 }
 
 @media (min-width: 376px) {

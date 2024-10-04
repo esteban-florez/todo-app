@@ -7,8 +7,7 @@
   width: 100%;
   background-color: var(--bg-neutral-desaturated);
   align-items: center;
-  display: grid;
-  grid-template-columns: 12% 1fr;
+  display: flex;
   padding: 0 12px;
 }
 
@@ -20,16 +19,44 @@
   font-size: 13px;
   color: var(--text-bright);
   caret-color: var(--primary);
+  width: 100%;
+  padding-right: 1rem;
+}
+
+.TodoForm-button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: .4rem .8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  filter: none;
+  transition: filter, color, background-color 200ms ease;
+}
+
+.TodoForm-button:hover, .TodoForm-button:focus {
+  filter: brightness(1.1);
+}
+
+.TodoForm-button:disabled {
+  opacity: .3;
+  background-color: #aaa;
+  color: var(--bg-neutral-desaturated);
+  pointer-events: none;
+  user-select: none;
 }
 
 .TodoForm div {
   cursor: default;
+  max-width: 3.2rem;
 }
 
 @media (min-width: 376px) {
   .TodoForm {
     height: 64px;
-    grid-template-columns: 10% 1fr;
+    display: flex;
+    align-items: center;
   }
 
   .TodoForm-input {
