@@ -20,7 +20,7 @@
   font-weight: bold;
 }
 
-@media (min-width: 376px) {
+@media (min-width: 768px) {
   .Button--sm {
     font-size: var(--sm);
   }

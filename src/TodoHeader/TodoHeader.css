@@ -9,6 +9,7 @@
   font-size: var(--xs);
   text-align: center;
   width: 100%;
+  margin-top: 1rem;
 }
 
 .TodoHeader-author > a {
@@ -16,7 +17,25 @@
   font-size: inherit;
 }
 
-@media (min-width: 376px) {
+.TodoHeader-author > span {
+  display: none;
+}
+
+.TodoHeader-author > br {
+  display: block;
+}
+
+@media (min-width: 350px) {
+  .TodoHeader-author > br {
+    display: none;
+  }
+
+  .TodoHeader-author > span {
+    display: inline;
+  }
+}
+
+@media (min-width: 768px) {
   .TodoHeader-author {
     font-size: var(--sm);
     text-align: left;

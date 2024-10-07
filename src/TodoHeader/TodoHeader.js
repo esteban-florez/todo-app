@@ -11,7 +11,7 @@ const TodoHeader = () => {
         <ThemeButton />
       </div>
       <p className='TodoHeader-author'>
-        Reto de <a href='https://frontendmentor.com'>FrontendMentor</a> - Construido por <a href='https://github.com/esteban-florez'>Esteban Florez</a>
+        Reto de <a href='https://frontendmentor.com'>FrontendMentor</a> <br /> <span>-</span> Construido por <a href='https://github.com/esteban-florez'>Esteban Florez</a>
       </p>
     </header>
   );

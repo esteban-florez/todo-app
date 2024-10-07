@@ -3,7 +3,6 @@
 body {
   background-color: var(--bg-neutral);
   background-repeat: no-repeat;
-  background-size: contain;
   transition: background-image 200ms ease;
 }
 
@@ -16,10 +15,10 @@ body {
 }
 
 .App {
-  width: 325px;
+  padding: 1rem;
   margin: 0 auto;
-  padding-top: 25px;
-  height: 100vh;
+  min-height: 100vh;
+  max-width: 375px;
 }
 
 .App-bottom-text {
@@ -38,8 +37,11 @@ body {
     background-image: url(../images/bg-desktop-light.jpg);
   }
 
+}
+
+@media (min-width: 768px) {
   .App {
-    width: 600px;
+    max-width: 700px;
   }
 }
 

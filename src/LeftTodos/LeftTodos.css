@@ -3,7 +3,7 @@
   font-size: var(--xs);
 }
 
-@media (min-width: 376px) {
+@media (min-width: 768px) {
   .LeftTodos {
     font-size: var(--sm);
   }

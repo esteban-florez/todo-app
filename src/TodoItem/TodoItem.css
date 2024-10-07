@@ -31,24 +31,29 @@
 }
 
 .TodoItem-cross {
-  opacity: 0;
   display: grid;
   place-items: center;
-  transition: opacity 300ms ease;
   cursor: pointer;
 }
 
-.TodoItem-cross--visible {
-  opacity: 1;
-}
-
-@media (min-width: 376px) {
+@media (min-width: 768px) {
   .TodoItem {
     height: 64px;
   }
 
   .TodoItem-text {
     font-size: var(--base);
+  }
+}
+
+@media (min-width: 1024px) {
+  .TodoItem-cross {
+    opacity: 0;
+    transition: opacity 300ms ease;
+  }
+
+  .TodoItem-cross--visible {
+    opacity: 1;
   }
 }
 

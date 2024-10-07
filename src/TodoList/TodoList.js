@@ -28,7 +28,7 @@ const TodoList = () => {
   }
 
   return (
-    <div className='TodoList-container'>
+    <main className='TodoList-container'>
       <div className='TodoList-header'>
         <LeftTodos />
         <Filters display="desktop" />
@@ -45,7 +45,7 @@ const TodoList = () => {
         )}
       </ul>
       )}
-    </div>
+    </main>
   );
 };
 

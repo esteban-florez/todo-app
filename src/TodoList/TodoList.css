@@ -34,7 +34,7 @@
   font-size: var(--sm);
 }
 
-@media (min-width: 376px) {
+@media (min-width: 768px) {
   .TodoList-header {
     justify-items: center;
   }

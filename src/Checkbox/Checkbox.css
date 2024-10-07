@@ -47,7 +47,7 @@
   display: none;
 }
 
-@media (min-width: 376px) {
+@media (min-width: 768px) {
   .Checkbox {
     width: 24px;
     height: 24px;

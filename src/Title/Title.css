@@ -6,6 +6,12 @@
 
 @media (min-width: 376px) {
   .Title {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 768px) {
+  .Title {
     font-size: 40px;
   }
 }
