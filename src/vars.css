@@ -1,5 +1,9 @@
 :root {
   --primary: hsl(220, 98%, 61%);
+  --xs: 12px;
+  --sm: 14px;
+  --base: 16px;
+  --lg: 18px;
 }
 
 :root[data-theme="dark"] {

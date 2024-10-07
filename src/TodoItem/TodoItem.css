@@ -3,9 +3,9 @@
   border-top: 1px solid var(--bg-border);
   width: 100%;
   background-color: var(--bg-neutral-desaturated);
-  display: grid;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  grid-template-columns: 12% 1fr 10%;
   padding: 0 0 0 11px;
 }
 
@@ -15,8 +15,9 @@
 
 .TodoItem-text {
   color: var(--text-bright);
-  font-size: 12px;
   margin: 3px;
+  width: 100%;
+  font-size: var(--sm);
 }
 
 .TodoItem-text--checked {
@@ -24,27 +25,30 @@
   color: var(--text-neutral);
 }
 
+.TodoItem-cross {
+  width: max-content;
+  padding: 0 1rem;
+}
+
+.TodoItem-cross {
+  opacity: 0;
+  display: grid;
+  place-items: center;
+  transition: opacity 300ms ease;
+  cursor: pointer;
+}
+
+.TodoItem-cross--visible {
+  opacity: 1;
+}
+
 @media (min-width: 376px) {
   .TodoItem {
     height: 64px;
-    grid-template-columns: 10% 1fr 10%;
   }
 
   .TodoItem-text {
-    margin: 0 0 0 4px;
-    font-size: 18px;
-  }
-
-  .TodoItem-cross {
-    opacity: 0;
-    display: grid;
-    place-items: center;
-    transition: opacity 300ms ease;
-    cursor: pointer;
-  }
-
-  .TodoItem-cross--visible {
-    opacity: 1;
+    font-size: var(--base);
   }
 }
 

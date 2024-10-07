@@ -8,7 +8,7 @@
   list-style-type: none;
 }
 
-.TodoList-footer {
+.TodoList-header {
   border-radius: 6px 6px 0 0;
   height: 50px;
   width: 100%;
@@ -31,12 +31,12 @@
 .TodoList-empty-message {
   color: var(--text-neutral);
   padding-bottom: 1rem;
+  font-size: var(--base);
 }
 
 @media (min-width: 376px) {
-  .TodoList-footer {
+  .TodoList-header {
     justify-items: center;
-    grid-template-columns: 15% 1fr 20%;
   }
 }
 

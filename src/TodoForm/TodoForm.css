@@ -16,7 +16,7 @@
   outline: none;
   background-color: transparent;
   border: none;
-  font-size: 13px;
+  font-size: var(--sm);
   color: var(--text-bright);
   caret-color: var(--primary);
   width: 100%;
@@ -30,7 +30,7 @@
   padding: .4rem .8rem;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: var(--sm);
   filter: none;
   transition: filter, color, background-color 200ms ease;
 }
@@ -47,11 +47,6 @@
   user-select: none;
 }
 
-.TodoForm div {
-  cursor: default;
-  max-width: 3.2rem;
-}
-
 @media (min-width: 376px) {
   .TodoForm {
     height: 64px;
@@ -61,7 +56,7 @@
 
   .TodoForm-input {
     margin: 0 0 0 4px;
-    font-size: 18px;
+    font-size: var(--base);
   }
 }
 

@@ -8,11 +8,11 @@ const TodoHeader = () => {
     <header className='TodoHeader'>
       <div>
         <Title>TODO</Title>
-        <p className='TodoHeader-author'>
-          Reto de <a href='https://frontendmentor.com'>FrontendMentor</a> - Construido por <a href='https://github.com/esteban-florez'>Esteban Florez</a>
-        </p>
+        <ThemeButton />
       </div>
-      <ThemeButton />
+      <p className='TodoHeader-author'>
+        Reto de <a href='https://frontendmentor.com'>FrontendMentor</a> - Construido por <a href='https://github.com/esteban-florez'>Esteban Florez</a>
+      </p>
     </header>
   );
 };

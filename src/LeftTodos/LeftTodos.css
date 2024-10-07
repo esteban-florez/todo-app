@@ -1,11 +1,11 @@
 .LeftTodos {
   color: var(--text-neutral);
-  font-size: 11px;
+  font-size: var(--xs);
 }
 
 @media (min-width: 376px) {
   .LeftTodos {
-    font-size: 14px;
+    font-size: var(--sm);
   }
 }
 

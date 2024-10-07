@@ -1,13 +1,14 @@
-.TodoHeader {
+.TodoHeader > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
 }
 
 .TodoHeader-author {
   color: white;
-  font-size: .8rem;
+  font-size: var(--xs);
+  text-align: center;
+  width: 100%;
 }
 
 .TodoHeader-author > a {
@@ -16,8 +17,9 @@
 }
 
 @media (min-width: 376px) {
-  .TodoHeader {
-    height: 100px;
+  .TodoHeader-author {
+    font-size: var(--sm);
+    text-align: left;
   }
 }
 

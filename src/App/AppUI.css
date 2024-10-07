@@ -23,7 +23,7 @@ body {
 }
 
 .App-bottom-text {
-  font-size: 14px;
+  font-size: var(--sm);
   color: var(--text-neutral);
   text-align: center;
   padding: 45px 0;
@@ -37,6 +37,7 @@ body {
   :root[data-theme="light"] body {
     background-image: url(../images/bg-desktop-light.jpg);
   }
+
   .App {
     width: 600px;
   }

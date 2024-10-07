@@ -12,21 +12,21 @@
 }
 
 .Button--sm {
-  font-size: 11px;
+  font-size: var(--xs);
 }
 
 .Button--lg {
-  font-size: 14px;
+  font-size: var(--sm);
   font-weight: bold;
 }
 
 @media (min-width: 376px) {
   .Button--sm {
-    font-size: 13px;
+    font-size: var(--sm);
   }
 
   .Button--lg {
-    font-size: 15px;
+    font-size: var(--base);
   }
 
   .Button:hover {
@@ -37,4 +37,3 @@
     pointer-events: none;
   }
 }
-
