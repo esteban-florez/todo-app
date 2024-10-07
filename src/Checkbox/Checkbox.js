@@ -3,7 +3,7 @@ import { AppContext } from '../AppProvider/AppProvider';
 import useHoverable from '../AppProvider/useHoverable';
 import './Checkbox.css';
 
-const Checkbox = ({ children, checked, text, formCheckbox }) => {
+const Checkbox = ({ children, checked, id, formCheckbox }) => {
   const { completeTodo } = React.useContext(AppContext);
   const { hover, enter, leave } = useHoverable();
 
@@ -16,7 +16,7 @@ const Checkbox = ({ children, checked, text, formCheckbox }) => {
   }
 
   return (
-    <div onClick={() => completeTodo(text)} className='Checkbox-container'>
+    <div onClick={() => completeTodo(id)} className='Checkbox-container'>
       <div onMouseEnter={enter} onMouseLeave={leave} className={`Checkbox${checkboxClass}`}>
         <div className={`Checkbox-checked-bg${checkedBgClass}`}></div>
         {children}

@@ -5,14 +5,15 @@ import { AppContext } from '../AppProvider/AppProvider';
 import useHoverable from '../AppProvider/useHoverable';
 import './TodoItem.css';
 
-const TodoItem = ({ children, completed }) => {
+const TodoItem = ({ todo }) => {
+  const { id, text, completed } = todo
   const { deleteTodo } = React.useContext(AppContext);
   const { hover, enter, leave } = useHoverable();
 
   return (
     <li onMouseEnter={enter} onMouseLeave={leave} className='TodoItem'>
       <Checkbox
-        text={children}
+        id={id}
         checked={completed}
       >
         {completed && <Icon type='check' size='sm' />}
@@ -21,10 +22,10 @@ const TodoItem = ({ children, completed }) => {
       <span
         className={`TodoItem-text${completed ? ' TodoItem-text--checked' : ''}`}
       >
-        {children}
+        {text}
       </span>
 
-      <div onClick={() => deleteTodo(children)} className={`TodoItem-cross${hover ? ' TodoItem-cross--visible' : ''}`}  >
+      <div onClick={() => deleteTodo(id)} className={`TodoItem-cross${hover ? ' TodoItem-cross--visible' : ''}`}  >
         <Icon type='cross' size='ml' />
       </div>
     </li>

@@ -41,13 +41,7 @@ const TodoList = () => {
       ) : (
       <ul className='TodoList-list'>
         {displayedTodos.map(
-          todo => (
-            <TodoItem
-              key={todo.id}
-              completed={todo.completed}
-            >
-              {todo.text}
-            </TodoItem>)
+          todo => <TodoItem key={todo.id} todo={todo} />
         )}
       </ul>
       )}

@@ -31,12 +31,16 @@
 .TodoList-empty-message {
   color: var(--text-neutral);
   padding-bottom: 1rem;
-  font-size: var(--base);
+  font-size: var(--sm);
 }
 
 @media (min-width: 376px) {
   .TodoList-header {
     justify-items: center;
+  }
+
+  .TodoList-empty-message {
+    font-size: var(--base);
   }
 }
 

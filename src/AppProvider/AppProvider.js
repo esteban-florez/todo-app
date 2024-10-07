@@ -27,6 +27,7 @@ const AppProvider = ({ children }) => {
     const newTodo = {
       completed: false,
       text,
+      id: crypto.randomUUID(),
     };
     updatedTodos.unshift(newTodo);
     saveTodos(updatedTodos);
@@ -37,10 +38,10 @@ const AppProvider = ({ children }) => {
     setCompletedTodos([]);
   };
 
-  const completeTodo = (text) => {
+  const completeTodo = (id) => {
     const updatedTodos = todos.map(
       (todo) => {
-        if (todo.text === text) {
+        if (todo.id === id) {
           todo.completed = true;
         }
         return todo;
@@ -48,9 +49,9 @@ const AppProvider = ({ children }) => {
     saveTodos(updatedTodos);
   };
 
-  const deleteTodo = (text) => {
+  const deleteTodo = (id) => {
     const updatedTodos = [...todos];
-    const searchedIndex = todos.findIndex(todo => todo.text === text);
+    const searchedIndex = todos.findIndex(todo => todo.id === id);
     updatedTodos.splice(searchedIndex, 1);
     saveTodos(updatedTodos);
   };
