@@ -1,6 +1,5 @@
 import React from 'react';
 import { TodoHeader } from '../TodoHeader/TodoHeader';
-import { TodoFooter } from '../TodoFooter/TodoFooter';
 import { TodoList } from '../TodoList/TodoList';
 import { FiltersPanel } from '../FiltersPanel/FiltersPanel';
 import { AppContext } from '../AppProvider/AppProvider';
@@ -20,7 +19,6 @@ const AppUI = () => {
       {/* <p className='App-bottom-text'>
         Drag and drop to reorder list
       </p> */}
-      <TodoFooter />
     </div>
   );
 };

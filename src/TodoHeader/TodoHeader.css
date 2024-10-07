@@ -5,6 +5,16 @@
   height: 70px;
 }
 
+.TodoHeader-author {
+  color: white;
+  font-size: .8rem;
+}
+
+.TodoHeader-author > a {
+  color: inherit;
+  font-size: inherit;
+}
+
 @media (min-width: 376px) {
   .TodoHeader {
     height: 100px;

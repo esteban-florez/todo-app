@@ -18,7 +18,7 @@ const Checkbox = ({ children, checked, text, formCheckbox }) => {
   return (
     <div onClick={() => completeTodo(text)} className='Checkbox-container'>
       <div onMouseEnter={enter} onMouseLeave={leave} className={`Checkbox${checkboxClass}`}>
-        <div className={`Checkbox-checked-bg${checkedBgClass}`} ></div>
+        <div className={`Checkbox-checked-bg${checkedBgClass}`}></div>
         {children}
         <div className={`Checkbox-hover-circle`} ></div>
       </div>
