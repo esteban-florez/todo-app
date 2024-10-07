@@ -7,7 +7,7 @@ import { TodoItem } from '../TodoItem/TodoItem';
 import './TodoList.css';
 
 const TodoList = () => {
-  const { display, currentFilter, todos, leftTodos, completedTodos, clearCompleted } = React.useContext(AppContext);
+  const { currentFilter, todos, leftTodos, completedTodos, clearCompleted } = React.useContext(AppContext);
   let displayedTodos = null;
   let emptyMessage = '';
 
@@ -29,9 +29,9 @@ const TodoList = () => {
 
   return (
     <div className='TodoList-container'>
-      <div className='TodoList-footer'>
+      <div className='TodoList-header'>
         <LeftTodos />
-        {(display === 'desktop') && <Filters />}
+        <Filters display="desktop" />
         <Button click={clearCompleted} type='button' size='sm'>Eliminar Completadas</Button>
       </div>
       {displayedTodos.length === 0 ? (
@@ -43,7 +43,7 @@ const TodoList = () => {
         {displayedTodos.map(
           todo => (
             <TodoItem
-              key={todo.text}
+              key={todo.id}
               completed={todo.completed}
             >
               {todo.text}

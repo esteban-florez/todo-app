@@ -1,14 +1,21 @@
 .Filters {
   display: flex;
   gap: .5rem;
-  width: 160px;
   height: 100%;
+  width: max-content;
   justify-content: space-evenly;
 }
 
-@media (min-width: 376px) {
-  .Filters {
-    width: max-content;
-  }
+.Filters--desktop {
+  display: none;
 }
 
+@media (min-width: 376px) {
+  .Filters--mobile {
+    display: none;
+  }
+
+  .Filters--desktop {
+    display: flex;
+  }
+}

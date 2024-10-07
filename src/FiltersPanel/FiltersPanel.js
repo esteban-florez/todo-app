@@ -5,7 +5,7 @@ import './FiltersPanel.css';
 const FiltersPanel = () => {
   return (
     <div className='FiltersPanel'>
-      <Filters />
+      <Filters display="mobile" />
     </div>
   );
 };

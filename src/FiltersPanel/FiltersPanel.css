@@ -11,3 +11,9 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+@media (min-width: 376px) {
+  .FiltersPanel {
+    display: none;
+  }
+}
+

@@ -3,7 +3,7 @@ import { AppContext } from '../AppProvider/AppProvider';
 import { Button } from '../Button/Button';
 import './Filters.css';
 
-function Filters() {
+function Filters({ display }) {
   const { setCurrentFilter, currentFilter } = React.useContext(AppContext);
 
   const filters = [
@@ -22,7 +22,7 @@ function Filters() {
   ];
 
   return (
-    <nav className='Filters'>
+    <nav className={`Filters Filters--${display}`}>
       {filters.map(({ filter, text }) => (
         <Button key={filter} type='button' click={() => setCurrentFilter(filter)} selected={filter === currentFilter} size='lg'>{text}</Button>
       ))}
